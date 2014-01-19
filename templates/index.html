@@ -1,0 +1,44 @@
+$def with (input_prospect,matched_prospect,score)
+
+$if matched_prospect:
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Here are the top 3 matched prospects to $input_prospect with similarities:</h1>
+       <!--  <p class="lead">Against our own records.</p>  -->
+      </div>
+
+    </div><!-- /.container -->
+
+    <div class="panel panel-default">
+    <!-- Default panel contents -->
+      <div class="panel-heading">Among all the prospects we have</div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Similarity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>$matched_prospect[0]</td>
+            <td>$score[0] </td>
+          </tr>
+          <tr>
+            <td>$matched_prospect[1]</td>
+            <td>$score[1]</td>
+          </tr>
+          <tr>
+            <td>$matched_prospect[2]</td>
+            <td>$score[2]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+$else:
+    <em>Hello</em>, world!
+
+
