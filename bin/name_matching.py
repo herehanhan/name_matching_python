@@ -30,7 +30,7 @@ def pre_clean(name):
     return name
 
 
-prospects = {}
+prospects = []
 CLEANED_PROSPECTS = []
 
 with open(filename) as fin:
