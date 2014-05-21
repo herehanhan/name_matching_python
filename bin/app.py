@@ -2,7 +2,9 @@ import web
 import name_matching as nm
 
 urls = (
-  '/lookup', 'Index'
+  '/lookup', 'Index',
+  '/about', 'About',
+  '/contact','Contact'
   )
 
 app = web.application(urls, globals())
@@ -24,7 +26,17 @@ class Index(object):
 #        matched = nm.Top3Getter(form.input_prospect)
 #        #input_prospect = "%s, %s" % (matched[0][0],matched[0][1])
 #        return render.index(matched_prospect=zip(*matched)[0],score=zip(*matched)[1])
-		
+
+class About(object):
+    def GET(self):
+       return render.About()
+
+
+
+class Contact(object):
+    def GET(self):
+       return render.Contact()
+
 if __name__ == "__main__":
     app.run()
 
